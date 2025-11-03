@@ -1,0 +1,101 @@
+{
+  "componentsToGenerate": [
+    "Navigation",
+    "Hero",
+    "FeaturedProperties",
+    "PropertyCard",
+    "PropertyGrid",
+    "PropertyFilters",
+    "AgentCard",
+    "AgentGrid",
+    "StatsSection",
+    "ContactForm",
+    "Footer"
+  ],
+  "estimatedChallenges": [
+    {
+      "component": "Navigation",
+      "challenge": "Creating brutalist navigation with bold typography while maintaining usability",
+      "mitigation": "Use large, uppercase text with thick borders, ensure sufficient touch targets (44px min), implement mobile hamburger with full-screen overlay"
+    },
+    {
+      "component": "Hero",
+      "challenge": "Balancing dramatic brutalist design with clear messaging and CTA visibility",
+      "mitigation": "Use asymmetric layout with oversized typography, ensure CTA button has high contrast with thick border, position text over solid background areas of image"
+    },
+    {
+      "component": "PropertyCard",
+      "challenge": "Displaying property information in brutalist style without sacrificing readability",
+      "mitigation": "Use thick black borders, hard shadows (box-shadow: 8px 8px 0 #000), monospace for prices/specs, ensure adequate padding for text legibility"
+    },
+    {
+      "component": "PropertyGrid",
+      "challenge": "Creating responsive grid that maintains brutalist aesthetic across breakpoints",
+      "mitigation": "Use CSS Grid with explicit gaps, single column on mobile, 2-col on tablet, 3-col on desktop, maintain consistent card heights with aspect-ratio"
+    },
+    {
+      "component": "PropertyFilters",
+      "challenge": "Making functional filters that fit brutalist design language",
+      "mitigation": "Use checkbox/radio inputs with custom styling (thick borders, no rounded corners), dropdown selects with hard edges, instant filtering with useState"
+    },
+    {
+      "component": "AgentCard",
+      "challenge": "Presenting agent photos in brutalist style while keeping them professional",
+      "mitigation": "Use high-contrast black and white photos, thick border frames, overlay text on solid color blocks, ensure photos are square or consistent aspect ratio"
+    },
+    {
+      "component": "StatsSection",
+      "challenge": "Displaying numerical data in visually striking brutalist format",
+      "mitigation": "Use extremely large numbers (72px+), monospace font, arrange in asymmetric grid, add thick dividing lines between stats"
+    },
+    {
+      "component": "ContactForm",
+      "challenge": "Creating usable form inputs with brutalist styling",
+      "mitigation": "Thick borders on inputs (3px solid black), no rounded corners, high contrast labels, clear focus states (invert colors), chunky submit button"
+    },
+    {
+      "component": "Footer",
+      "challenge": "Organizing footer information while maintaining bold aesthetic",
+      "mitigation": "Use grid layout with thick dividing lines, uppercase section headers, minimal spacing, solid background color (#000 or #2A2A2A)"
+    }
+  ],
+  "fixerContext": {
+    "expectedStructure": "Simple Next.js app. Components in components/ folder at root. app/page.tsx imports from ../components/",
+    "importPaths": "Use '../components/ComponentName' from app/page.tsx",
+    "commonIssues": [
+      "Import path mismatches - ensure all imports use '../components/' prefix from app/page.tsx",
+      "Missing 'use client' directive - add to components using useState, onClick, or other client-side features",
+      "Image optimization - use Next.js Image component with proper width/height",
+      "CSS conflicts - use Tailwind classes consistently, avoid inline styles",
+      "Brutalist styling consistency - ensure all components use thick borders (border-4), hard shadows (shadow-[8px_8px_0_0_#000]), no rounded corners",
+      "Typography hierarchy - maintain consistent use of uppercase, bold weights, and large sizes",
+      "Color palette adherence - stick to black, white, grays, with minimal accent color usage",
+      "Responsive breakpoints - test mobile (single column), tablet (2-col), desktop (3-col) layouts",
+      "Button styling - all CTAs should have thick borders, solid backgrounds, and hard edges",
+      "Grid gaps - use consistent spacing (gap-8 or gap-12) for brutalist aesthetic"
+    ],
+    "brutalistDesignChecklist": [
+      "No border-radius anywhere (border-rounded-none)",
+      "Thick borders on all cards and buttons (border-4 or border-8)",
+      "Hard box shadows with offset (shadow-[8px_8px_0_0_#000])",
+      "Uppercase text for headers (uppercase)",
+      "Bold or black font weights (font-bold, font-black)",
+      "High contrast color combinations",
+      "Asymmetric layouts where appropriate",
+      "Generous negative space",
+      "Monospace fonts for data/numbers",
+      "Minimal color palette (primarily black/white/gray)"
+    ],
+    "keyFeaturesToImplement": [
+      "Property filtering by price, beds, location",
+      "Responsive property grid (1-col mobile, 2-col tablet, 3-col desktop)",
+      "Agent profile cards with contact info",
+      "Contact form with validation",
+      "Featured properties section on homepage",
+      "Stats/metrics section with large numbers",
+      "Mobile-friendly navigation with hamburger menu",
+      "Property card hover effects (color inversion or border color change)",
+      "Search functionality (can be UI-only for MVP)"
+    ]
+  }
+}
