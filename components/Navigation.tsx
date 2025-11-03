@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 
 export default function Navigation() {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-concrete-900/95 backdrop-blur-sm border-b border-concrete-700/50">
